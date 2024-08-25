@@ -1,0 +1,61 @@
+html,
+body {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#CatContainer {
+  width: 450px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#catbutton {
+  margin: 5px 80px;
+}
+
+#meow-fact{
+  position: absolute;
+  text-align: center;
+  margin-top: 55px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Shadow Into Light,cursive;
+  font-size: large;
+}
+
+#animatedcatbg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("cat2.jpg");
+  opacity: 0.5;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  z-index: -1000;
+  /*adjust s value for speed*/
+  animation: animatedcatbg 300s linear infinite;
+  }
+  
+@keyframes animatedcatbg {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: 10000px 0;
+    }
+  }
